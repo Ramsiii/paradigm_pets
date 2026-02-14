@@ -92,7 +92,7 @@ ul
   background: #ccc;
 }
 
-  }
+@media (max-width: 600px) {
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
