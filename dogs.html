@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="universal.css">
   </head>
   <body link="#0000EE" vlink="#551A8B" text="#000000" alink="#EE0000" class="bg">
-	
+
     <h1>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </h1>
@@ -15,9 +15,13 @@
     <hr width="100%" size="2"> <br>
     <div class="topnav"> <a href="home.html">Home</a> <a
         href="cats.html">Cats</a> <a class="active" href="dogs.html">Dogs</a> <a
-        href="FAQs.html">FAQs</a> 
-		<input type="text" placeholder="Find something...">
-		<button type="submit">Fetch</button>
+        href="FAQs.html">FAQs</a>
+      <div class="search-container">
+        <form id="topnav-search" role="search">
+          <input type="text" id="search-query" name="q" placeholder="Find something..." aria-label="Search pet care topics">
+          <button type="submit">Fetch</button>
+        </form>
+      </div>
 	</div>
 	<p>
 		<i>
@@ -35,7 +39,7 @@
 			Much like humans, dogs need to have a healthy level of activity to keep their blood, heart, and really every organ healthy. They need to exercise like we do. They need sun and fresh air. The recommended time necessary to qualify as sufficient exercise varies greatly with breed and size differences, but generally it is recommended to have at least 30–120 minutes of exercise per day! Can you imagine exercising 2 hours per day? Okay, I know that wouldn't bother some of you reading this. But the thought of it to me makes me cringe! And by the way, exercising your dog does not mean they challenge you to a push-up contest. Brisk walks are okay, too!
 		</p>
 	<br>
-		<h3>
+		<h3 id="grooming-handling">
 			Grooming & Handling
 		</h3>
 		<p>
@@ -51,5 +55,6 @@
 	</p>
 
     <br>
+    <script src="search.js"></script>
   </body>
 </html>

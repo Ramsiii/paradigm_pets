@@ -16,9 +16,13 @@
     <hr width="100%" size="4"> <br>
     <div class="topnav"> <a class="active" href="home.html">Home</a> <a
         href="cats.html">Cats</a> <a href="dogs.html">Dogs</a> <a
-        href="FAQs.html">FAQs</a> 
-		<input type="text" placeholder="Find something...">
-		<button type="submit">Fetch</button>
+        href="FAQs.html">FAQs</a>
+      <div class="search-container">
+        <form id="topnav-search" role="search">
+          <input type="text" id="search-query" name="q" placeholder="Find something..." aria-label="Search pet care topics">
+          <button type="submit">Fetch</button>
+        </form>
+      </div>
 	</div>
 <p>
 	<i>
@@ -55,5 +59,6 @@
     <br>
     <br>
     <br>
+    <script src="search.js"></script>
   </body>
 </html>

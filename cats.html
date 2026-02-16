@@ -14,9 +14,13 @@
 	<hr width="100%" size="2"> <br>
     <div class="topnav"> <a href="home.html">Home</a> <a
         class="active" href="cats.html">Cats</a> <a href="dogs.html">Dogs</a> <a
-        href="FAQs.html">FAQs</a> 
-		<input type="text" placeholder="Find something...">
-		<button type="submit">Fetch</button>
+        href="FAQs.html">FAQs</a>
+      <div class="search-container">
+        <form id="topnav-search" role="search">
+          <input type="text" id="search-query" name="q" placeholder="Find something..." aria-label="Search pet care topics">
+          <button type="submit">Fetch</button>
+        </form>
+      </div>
 	</div>
 <p>
 	<i>
@@ -25,7 +29,7 @@
 </p>
     <br>
 
-		<h3>
+		<h3 id="weeks-0-4">
 			0 - 4 Weeks
 		</h3>
 		<p>
@@ -52,7 +56,7 @@
 		Typically, around 3–4 weeks after birth, the kitten can start being introduced to soft wet kitten food. According to <a href="https://www.aspca.org/pet-care/cat-care/cat-nutrition-tips">ASPCA</a>, kittens at this age should eat 0.5–1 cup dry kitten food, or 6–9 ounces of wet kitten food, per day. Experts recommend that if the kitten has difficulties eating hard food, a small amount of water can be added to help. Cat food that is optimized for kittens is always preferred, as it provides the additional nutrients that are needed for growth, energy, and wellness. Depending on the cat breed, your kitten may have different dietary requirements. You should always consult with your veterinarian for recommendations.
 	</p>
 	<br>
-		<h3>
+		<h3 id="years-1-7">
 			1 Year - 7 Years
 		</h3>
 	<p>
@@ -66,5 +70,6 @@
 	<p>
 		Much like many living organisms, the cat body begins to deteriorate and experience a lot of changes. Cats in this age should be fed fewer fats and calories, but more quality proteins. This mean when you are purchasing packaged foods for your cat, look for food that states a particular protein (such as "salmon") and NOT just a category (such as fish). The latter usually means the ingredients are byproducts, or combinations, of lesser quality proteins.
 	</p>
+    <script src="search.js"></script>
   </body>
 </html>

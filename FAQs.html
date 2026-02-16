@@ -14,10 +14,14 @@
     <h1>FAQs</h1>
     <hr width="100%" size="2"> <br>
     <div class="topnav"> <a href="home.html">Home</a> <a
-        href="cats.html">Dogs</a> <a href="dogs.html">Cats</a> <a
-        class="active" href="FAQs.html">FAQs</a> 
-		<input type="text" placeholder="Find something..." >
-		<button type="submit">Fetch</button>
+        href="cats.html">Cats</a> <a href="dogs.html">Dogs</a> <a
+        class="active" href="FAQs.html">FAQs</a>
+      <div class="search-container">
+        <form id="topnav-search" role="search">
+          <input type="text" id="search-query" name="q" placeholder="Find something..." aria-label="Search pet care topics">
+          <button type="submit">Fetch</button>
+        </form>
+      </div>
 	</div>
 
 	<p>
@@ -33,7 +37,7 @@
 			Sometimes our furry friends pick up hitchhikers that make them very itchy and uncomfortable. If gone unchecked, fleas can infest your home, making it even more difficult to rid them from your loved one’s coat. To eliminate fleas, choose a shampoo specially formulated to kill fleas and be sure to read and follow all instructions on the label. Repeat treatment as necessary until your pet is free of fleas; if you see skin irritation, stop use immediately and contact your local vet.
 		</p>
     <br>
-		<h3>
+		<h3 id="faq-bird">
 			<strong>Question:</strong> How long can I expect my pet bird to live?
 		</h3>
 		<p>
@@ -47,5 +51,6 @@
 			Most snakes eat one to two times per week, depending on their age, size, and activity level. Female snakes often increase their food intake as breeding season gets underway. Some snakes can go as long as two weeks before needing their next meal; this is normal. However, if your snake has not eaten in two or three weeks and seems lethargic, reach out to your local vet to determine if your snake might be ill or injured.
 		</p>
     <br>
+    <script src="search.js"></script>
   </body>
 </html>
