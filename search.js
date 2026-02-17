@@ -19,6 +19,7 @@
     { keywords: ['bird', 'birds', 'cockatiel', 'budgie', 'parrot', 'bird life'], page: 'FAQs.html', anchor: 'faq-bird' },
     { keywords: ['snake', 'snakes', 'feed snake', 'snake feeding'], page: 'FAQs.html', anchor: 'faq-snake' },
     { keywords: ['faq', 'faqs', 'question', 'questions', 'answer'], page: 'FAQs.html', anchor: '' },
+    { keywords: ['new pet consultation', 'consultation', 'contact', 'request consultation'], page: 'contact.html', anchor: '' },
     { keywords: ['home', 'main'], page: 'home.html', anchor: '' }
   ];
 
