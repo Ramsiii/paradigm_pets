@@ -6,6 +6,13 @@ body.bg {
   background-color: #E8EEF4;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
 a.pet {
 	font-size: 26px;
 	font-weight: bold;
