@@ -1,9 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 *	{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
 }
+html {
+  overflow-x: hidden;
+}
 body.bg {
   background-color: #E8EEF4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .site-header {
@@ -13,14 +24,47 @@ body.bg {
   flex-wrap: wrap;
 }
 
+/* Skip link for keyboard/screen reader users - visible on focus */
+.skip-link {
+  position: absolute;
+  top: -3em;
+  left: 0.5em;
+  padding: 0.5em 1em;
+  background: #003B6D;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #6699CC;
+  outline-offset: 2px;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #003B6D;
+  outline-offset: 2px;
+}
+.topnav a:focus-visible,
+.topnav button:focus-visible {
+  outline-color: #BDBDBD;
+}
+
 a.pet {
 	font-size: 26px;
 	font-weight: bold;
 }
 
 img.logo {
-	height: 100px;
-	width: 100px;
+	height: 123px;
+	width: 287px !important;
 }
 
 img.pet {
@@ -46,9 +90,46 @@ ul
 	margin-bottom:0in;
 	}
 
+hr {
+  margin-bottom: 0.35em;
+}
 .topnav {
+  margin-top: 0;
   overflow: hidden;
   background-color: #003B6D;
+  position: relative;
+}
+
+/* Hamburger button - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  background: #003B6D;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.topnav.open .hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.topnav.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.topnav.open .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .topnav a {
@@ -100,7 +181,23 @@ ul
   color: white;
 }
 
+/* Mobile: hamburger + dropdown */
 @media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+    float: left;
+  }
+  .topnav-menu {
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #003B6D;
+  }
+  .topnav.open .topnav-menu {
+    max-height: 500px;
+    overflow: visible;
+  }
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
@@ -109,8 +206,105 @@ ul
     margin: 0;
     padding: 14px;
   }
+  .topnav .search-container {
+    float: none;
+  }
   .topnav input[type=text] {
-    border: 1px solid #BDBDBD;  
+    border: 1px solid #BDBDBD;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .topnav button[type=submit] {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile-first responsive adjustments */
+main {
+  padding: 0 0.5em;
+  max-width: 100%;
+}
+img.logo {
+  max-width: 100%;
+  height: auto;
+}
+img.pet {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+table td {
+  padding: 0.25em;
+  vertical-align: top;
+}
+table img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 28px;
+    word-wrap: break-word;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  .site-header {
+    padding: 0.5em;
+  }
+  img.logo {
+    max-height: 80px;
+    width: auto !important;
+    max-width: 100%;
+  }
+  main {
+    padding: 0 0.75rem;
+  }
+  .contact-form {
+    max-width: 100%;
+    padding: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  a.pet {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  img.logo {
+    max-height: 60px;
+    width: auto !important;
+  }
+  main {
+    padding: 0 0.5rem;
+  }
+  .site-footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.85em;
+  }
+  .site-footer p {
+    margin: 0.3em 0;
   }
 }
 
@@ -151,8 +345,8 @@ ul
 }
 .contact-form .field-error {
   display: block;
-  font-size: 0.85em;
-  color: #ffb3b3;
+  font-size: 0.9em;
+  color: #ffcccc;
   margin-top: 0.25em;
   min-height: 1.25em;
 }
@@ -175,7 +369,7 @@ ul
 }
 .contact-form .form-actions button:disabled {
   background-color: #BDBDBD;
-  color: #676767;
+  color: #333;
   cursor: default;
 }
 .confirmation-message {

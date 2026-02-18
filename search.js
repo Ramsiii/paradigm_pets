@@ -21,8 +21,11 @@
     { keywords: ['bird', 'birds', 'hummingbird', 'ostrich'], page: 'birds.html', anchor: '' },
     { keywords: ['cockatiel', 'budgie', 'parrot', 'bird life', 'bird live'], page: 'FAQs.html', anchor: 'faq-bird' },
     { keywords: ['freshwater fish', 'freshwater', 'aquarium', 'pexpert fish'], page: 'fish.html', anchor: 'freshwater' },
+    { keywords: ['saltwater fish', 'saltwater', 'salinity', 'saltwater chemistry'], page: 'fish.html', anchor: 'saltwater' },
     { keywords: ['water chemistry', 'water testing', 'ph', 'ammonia', 'nitrates', 'nitrites', 'toxins fish'], page: 'fish.html', anchor: 'water-chemistry' },
-    { keywords: ['fish', 'aquatic', 'fish tank', 'saltwater'], page: 'fish.html', anchor: '' },
+    { keywords: ['fish', 'aquatic', 'fish tank'], page: 'fish.html', anchor: '' },
+    { keywords: ['guinea pig', 'guinea pig care', 'mouse care', 'hermit crab', 'hermit crab care', 'chinchilla', 'chinchilla care', 'gerbil', 'gerbil care', 'hamster', 'hamster care', 'small pet resources'], page: 'small-pets.html', anchor: 'resources' },
+    { keywords: ['small pets', 'small pet', 'small animal', 'cage', 'exercise wheel', 'bedding', 'substrate'], page: 'small-pets.html', anchor: '' },
     { keywords: ['snake', 'snakes', 'feed snake', 'snake feeding'], page: 'FAQs.html', anchor: 'faq-snake' },
     { keywords: ['faq', 'faqs', 'question', 'questions', 'answer'], page: 'FAQs.html', anchor: '' },
     { keywords: ['new pet consultation', 'consultation', 'contact', 'request consultation'], page: 'contact.html', anchor: '' },
@@ -64,6 +67,22 @@
     var form = document.getElementById('topnav-search');
     if (form) {
       form.addEventListener('submit', handleSearch);
+    }
+
+    var hamburger = document.querySelector('.hamburger');
+    var topnav = document.querySelector('.topnav');
+    if (hamburger && topnav) {
+      hamburger.addEventListener('click', function () {
+        var isOpen = topnav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      var menuLinks = topnav.querySelectorAll('.topnav-menu a');
+      for (var i = 0; i < menuLinks.length; i++) {
+        menuLinks[i].addEventListener('click', function () {
+          topnav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      }
     }
   }
 
