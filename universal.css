@@ -248,6 +248,20 @@ table img {
   height: auto;
 }
 
+/* Desktop: image tables in main sit closer together, aligned left */
+@media (min-width: 769px) {
+  main table {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    table-layout: auto;
+  }
+  main table td {
+    padding: 0.25em 0.5em;
+  }
+}
+
 @media (max-width: 768px) {
   * {
     font-size: 22px;
