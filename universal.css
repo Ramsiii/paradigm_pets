@@ -61,6 +61,9 @@ a.pet {
 	font-size: 26px;
 	font-weight: bold;
 }
+main a.pet {
+	padding-left: 0.25em;
+}
 
 img.logo {
 	height: 123px;
@@ -259,6 +262,9 @@ table img {
   }
   main table td {
     padding: 0.25em 0.5em;
+  }
+  main a.pet {
+    padding-left: 0.5em;
   }
 }
 
