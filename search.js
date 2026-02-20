@@ -52,15 +52,22 @@
 
   function handleSearch(e) {
     e.preventDefault();
+    var form = e.target;
+    var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      var originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Searching…';
+    }
     var query = getQuery();
     var target = findTarget(query);
-    if (target) {
-      var url = target.page + (target.anchor ? '#' + target.anchor : '');
+    var url = target
+      ? target.page + (target.anchor ? '#' + target.anchor : '')
+      : 'FAQs.html';
+    setTimeout(function () {
       window.location.href = url;
-    } else {
-      // No match: go to FAQs as a general "search results" / help page
-      window.location.href = 'FAQs.html';
-    }
+    }, 200);
   }
 
   function init() {

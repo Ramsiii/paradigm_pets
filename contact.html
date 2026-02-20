@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Request a new pet consultation or new pet care consultation. Our Pexperts respond within 48 hours. Paradigm Pet Professionals.">
+    <meta name="keywords" content="new pet consultation, new pet care consultation, contact Pexperts, Paradigm Pet Professionals">
+    <title>Contact - Paradigm Pet Professionals</title>
+    <link rel="stylesheet" href="universal.css">
+  </head>
+  <body id="top" link="#003B6D" vlink="#6699CC" text="#000000" alink="#6699CC" class="bg">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <img class="logo" src="paradigmpetslogo.png" alt="Paradigm Pet Professionals" height="142" width="140">
+    </header>
+    <hr width="100%" size="2">
+    <div class="topnav">
+      <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topnav-menu">
+        <a href="home.html">Home</a>
+        <a href="cats.html">Cats</a>
+        <a href="dogs.html">Dogs</a>
+        <a href="small-pets.html">Small Pets</a>
+        <a class="active" href="contact.html">Contact</a>
+        <div class="search-container">
+          <form id="topnav-search" role="search">
+            <input type="text" id="search-query" name="q" placeholder="Find something..." aria-label="Search pet care topics">
+            <button type="submit">Fetch</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+    <h1>Contact Us</h1>
+    <p>
+      <i>
+        Request a <strong>new pet consultation</strong> to get personalized guidance from our Pexperts. We are also happy to help you navigate the adoption process! We will guide you through each step in the process from determining which type of pet is best suited for your family and home environment, to completing the necessary paperwork, to bringing your new loved one home. Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. All fields are required.
+      </i>
+    </p>
+    <br>
+
+    <form id="consultation-form" class="contact-form" novalidate>
+      <div class="form-row">
+        <label for="user-name">Your name <span class="required">*</span></label>
+        <input type="text" id="user-name" name="user-name" required minlength="2" maxlength="100" placeholder="Full name" autocomplete="name">
+        <span class="field-error" id="user-name-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required placeholder="e.g. (555) 123-4567" autocomplete="tel">
+        <span class="field-error" id="phone-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="email">Email address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+        <span class="field-error" id="email-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="timezone">Time zone <span class="required">*</span></label>
+        <input type="text" id="timezone" name="timezone" required placeholder="e.g. America/New_York or EST" list="timezone-suggestions">
+        <datalist id="timezone-suggestions">
+          <option value="America/New_York (EST/EDT)">
+          <option value="America/Chicago (CST/CDT)">
+          <option value="America/Denver (MST/MDT)">
+          <option value="America/Los_Angeles (PST/PDT)">
+          <option value="UTC">
+        </datalist>
+        <span class="field-error" id="timezone-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="pet-name">Pet name <span class="required">*</span></label>
+        <input type="text" id="pet-name" name="pet-name" required minlength="1" maxlength="100" placeholder="Pet's name" autocomplete="off">
+        <span class="field-error" id="pet-name-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="pet-type">Pet type <span class="required">*</span></label>
+        <input type="text" id="pet-type" name="pet-type" required minlength="2" maxlength="80" placeholder="e.g. Dog, Cat, Bird" list="pet-type-suggestions" autocomplete="off">
+        <datalist id="pet-type-suggestions">
+          <option value="Dog">
+          <option value="Cat">
+          <option value="Bird">
+          <option value="Snake">
+          <option value="Other">
+        </datalist>
+        <span class="field-error" id="pet-type-error" aria-live="polite"></span>
+      </div>
+      <div class="form-row">
+        <label for="pet-age">Pet age <span class="required">*</span></label>
+        <input type="text" id="pet-age" name="pet-age" required placeholder="e.g. 2 years, 6 months" autocomplete="off">
+        <span class="field-error" id="pet-age-error" aria-live="polite"></span>
+      </div>
+      <div class="form-actions">
+        <button type="submit" id="submit-btn">Request Consultation</button>
+      </div>
+    </form>
+
+    <div id="confirmation-message" class="confirmation-message" hidden aria-live="polite" tabindex="-1">
+      <p><strong>Thank you for your request.</strong></p>
+      <p>Our team will respond within 48 hours to schedule your consultation. We look forward to helping you and your pet.</p>
+    </div>
+    </main>
+    <footer class="site-footer">
+      <p class="footer-business">Paradigm Pet Professionals — We respond within 48 hours.</p>
+      <p class="footer-links"><a href="contact.html">Contact</a> <a href="FAQs.html">FAQs</a> <a href="https://www.animalhumanesociety.org/adoption" target="_blank" rel="noopener">Adoption</a></p>
+      <p class="footer-back-to-top"><a href="#top">Back to top</a></p>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Paradigm Pet Professionals.</p>
+      <p class="footer-tagline">Evidence-based pet care advice for every pet lover</p>
+    </footer>
+
+    <script src="search.js"></script>
+    <script>
+      (function () {
+        var form = document.getElementById('consultation-form');
+        var confirmation = document.getElementById('confirmation-message');
+        var submitBtn = document.getElementById('submit-btn');
+
+        function digitsOnly(s) { return (s && s.match(/\d/g)) ? s.match(/\d/g).length : 0; }
+        function isEmailFormat(s) {
+          if (!s || typeof s !== 'string') return false;
+          var t = s.trim();
+          var at = t.indexOf('@');
+          if (at <= 0 || at === t.length - 1) return false;
+          var domain = t.slice(at + 1);
+          var lastDot = domain.lastIndexOf('.');
+          return lastDot > 0 && domain.length - lastDot >= 3;
+        }
+        function isTimezoneFormat(s) {
+          if (!s || typeof s !== 'string') return false;
+          var t = s.trim();
+          if (t.length < 2) return false;
+          if (t.indexOf('/') !== -1) return true;
+          var upper = t.toUpperCase();
+          if (/^(EST|EDT|CST|CDT|MST|MDT|PST|PDT|UTC|GMT)([+-]\d{1,2})?$/i.test(t)) return true;
+          if (upper.indexOf('UTC') === 0 || upper.indexOf('GMT') === 0) return true;
+          return false;
+        }
+
+        function showError(id, msg) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.classList.add('visible');
+          el.textContent = msg || '';
+        }
+        function clearError(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.classList.remove('visible');
+          el.textContent = '';
+        }
+        function setInvalid(input, invalid) {
+          if (!input) return;
+          if (invalid) input.classList.add('invalid'); else input.classList.remove('invalid');
+        }
+
+        function validate() {
+          var valid = true;
+          var name = document.getElementById('user-name');
+          var phone = document.getElementById('phone');
+          var email = document.getElementById('email');
+          var tz = document.getElementById('timezone');
+          var petName = document.getElementById('pet-name');
+          var petType = document.getElementById('pet-type');
+          var petAge = document.getElementById('pet-age');
+
+          if (!name || !name.value.trim() || name.value.trim().length < 2) {
+            showError('user-name-error', 'Please enter your full name (at least 2 characters).');
+            setInvalid(name, true);
+            valid = false;
+          } else { clearError('user-name-error'); setInvalid(name, false); }
+
+          if (!phone || !phone.value.trim()) {
+            showError('phone-error', 'Please enter your phone number.');
+            setInvalid(phone, true);
+            valid = false;
+          } else if (digitsOnly(phone.value) < 10) {
+            showError('phone-error', 'Please enter a valid phone number (at least 10 digits).');
+            setInvalid(phone, true);
+            valid = false;
+          } else { clearError('phone-error'); setInvalid(phone, false); }
+
+          if (!email || !email.value.trim()) {
+            showError('email-error', 'Please enter your email address.');
+            setInvalid(email, true);
+            valid = false;
+          } else if (!isEmailFormat(email.value)) {
+            showError('email-error', 'Please enter a valid email (e.g. name@domain.com).');
+            setInvalid(email, true);
+            valid = false;
+          } else { clearError('email-error'); setInvalid(email, false); }
+
+          if (!tz || !tz.value.trim()) {
+            showError('timezone-error', 'Please enter your time zone.');
+            setInvalid(tz, true);
+            valid = false;
+          } else if (!isTimezoneFormat(tz.value)) {
+            showError('timezone-error', 'Please enter a valid time zone (e.g. EST, America/New_York, or UTC).');
+            setInvalid(tz, true);
+            valid = false;
+          } else { clearError('timezone-error'); setInvalid(tz, false); }
+
+          if (!petName || !petName.value.trim()) {
+            showError('pet-name-error', 'Please enter your pet\'s name.');
+            setInvalid(petName, true);
+            valid = false;
+          } else { clearError('pet-name-error'); setInvalid(petName, false); }
+
+          if (!petType || !petType.value.trim() || petType.value.trim().length < 2) {
+            showError('pet-type-error', 'Please enter pet type (e.g. Dog, Cat).');
+            setInvalid(petType, true);
+            valid = false;
+          } else { clearError('pet-type-error'); setInvalid(petType, false); }
+
+          if (!petAge || !petAge.value.trim()) {
+            showError('pet-age-error', 'Please enter your pet\'s age.');
+            setInvalid(petAge, true);
+            valid = false;
+          } else { clearError('pet-age-error'); setInvalid(petAge, false); }
+
+          return valid;
+        }
+
+        if (form && submitBtn && confirmation) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var errs = form.querySelectorAll('.field-error.visible');
+            for (var i = 0; i < errs.length; i++) errs[i].classList.remove('visible');
+            form.querySelectorAll('.invalid').forEach(function (el) { el.classList.remove('invalid'); });
+            if (!validate()) return;
+
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            submitBtn.setAttribute('aria-busy', 'true');
+
+            setTimeout(function () {
+              form.hidden = true;
+              confirmation.hidden = false;
+              submitBtn.disabled = false;
+              submitBtn.classList.remove('loading');
+              submitBtn.removeAttribute('aria-busy');
+              confirmation.focus();
+            }, 600);
+          });
+        }
+
+        var y = document.getElementById('footer-year');
+        if (y) y.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>
