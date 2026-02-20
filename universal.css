@@ -461,13 +461,16 @@ table img {
 .footer-links a {
   color: #003B6D;
 }
-/* Desktop: Contact and FAQs side by side */
+/* Desktop: Contact, FAQs, Adoption aligned to start */
 @media (min-width: 769px) {
+  .footer-links {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
   .footer-links a {
     display: inline;
-  }
-  .footer-links a:first-of-type {
-    margin-right: 0.5em;
   }
 }
 /* Mobile: Contact and FAQs stacked */
