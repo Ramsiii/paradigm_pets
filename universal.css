@@ -251,16 +251,54 @@ table img {
   height: auto;
 }
 
+/* Cat feeding tables: desktop only */
+.feeding-table-desktop {
+  display: none;
+}
+@media (min-width: 769px) {
+  .feeding-table-desktop {
+    display: table;
+    width: 100%;
+    max-width: 32em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .feeding-table-desktop caption {
+    caption-side: top;
+    font-weight: bold;
+    padding: 0.35em 0.5em 0.25em 0;
+    text-align: left;
+  }
+  .feeding-table-desktop th,
+  .feeding-table-desktop td {
+    padding: 0.35em 0.5em;
+    text-align: left;
+    border: 1px solid #BDBDBD;
+  }
+  .feeding-table-desktop th {
+    background-color: #003B6D;
+    color: white;
+    font-weight: bold;
+    width: 38%;
+  }
+  .feeding-table-desktop tbody tr:nth-child(even) td {
+    background-color: #E8EEF4;
+  }
+}
+
 /* Desktop: image tables in main sit closer together, aligned left */
 @media (min-width: 769px) {
-  main table {
+  main table:not(.feeding-table-desktop) {
     width: auto;
     max-width: 100%;
     margin-left: 0;
     margin-right: auto;
     table-layout: auto;
   }
-  main table td {
+  main table:not(.feeding-table-desktop) td {
     padding: 0.25em 0.5em;
   }
   main a.pet {
@@ -422,6 +460,24 @@ table img {
 }
 .footer-links a {
   color: #003B6D;
+}
+/* Desktop: Contact and FAQs side by side */
+@media (min-width: 769px) {
+  .footer-links a {
+    display: inline;
+  }
+  .footer-links a:first-of-type {
+    margin-right: 0.5em;
+  }
+}
+/* Mobile: Contact and FAQs stacked */
+@media (max-width: 768px) {
+  .footer-links a {
+    display: block;
+  }
+  .footer-links a + a {
+    margin-top: 0.25em;
+  }
 }
 .footer-adoption {
   font-style: italic;
