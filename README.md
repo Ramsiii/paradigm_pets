@@ -3,6 +3,8 @@
 A responsive website redesign for Paradigm Pet Professionals, developed 
 as part of the WGU UI Design (D279) course.
 
+View page here: https://ramsiii.github.io/paradigm_pets/home.html
+
 ## Pages
 - `home.html` — Overview, adoption resources, consultation CTA
 - `cats.html` — Cat care by life stage (feeding guide tables)
